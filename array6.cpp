@@ -23,13 +23,12 @@ void displaypascal(int size)
 	printf("PASCAL TRIANGLE (size = %d)\n", size);
 	
 	//assign 1 to every array element
-	for (i=0;i,i<size;i++){
-		for (j=0;j<size;j++) pascaltriangle[i][j]=1;}
+	for (i=0;i,i<size;i++)
+		for (j=0;j<size;j++) pascaltriangle[i][j]=1;
 
 	//assign the rest of the array
-	for (i=2;i,i<size;i++){
-		pascaltriangle[i][0]=1;
-		for (j=1;j<i;j++) {pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j];}}
+	for (i=2;i,i<size;i++)
+		for (j=1;j<i;j++) {pascaltriangle[i][j]=pascaltriangle[i-1][j-1]+pascaltriangle[i-1][j];}
 	
 	//print the pascaltriangle
 	for (i=0;i<size;i++)
