@@ -1,31 +1,27 @@
-/*  By using two-dimensional array, write C program to display a table of numbers as shown below: 
+#include<stdio.h> 
+#include<conio.h> 
+  
+   int main() 
+    { 
+     
+     int matrix[5][5]; 
+     int i,j; 
+     for(i=0;i<5;i++) //assign values to the matrix
 
-1	2	3	4	5	 
-6	7	8 	9	10
-11	12	13	14	15
-16	17	18	19	20
-21	22	23	24	25*/
+        for(j=0;j<5;j++){ //
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int main() 
-{
-	int a[5][5];
-	int i, j;
-	int temp=1;
-		
-	for (i=0;i<5;i++)
-	{
-		for (j=0;j<5;j++) 
-		{
-			a[i][j]=temp;
-			printf("%d", a[i][j]); printf("\t"); temp=temp+1;
-		}
-		temp=temp;
-		printf("\n");
-		
-	}
-system("PAUSE");
-return 0;
-}
+           if(i==j) matrix[i][j]=0;if row=column=> fill the matrix with 0 
+           else if(i>j) matrix[i][j]=-1;//if row>columns=> fill matrix with -1
+           else matrix[i][j]=1; //if row<columns=> fill matrix with 1 
+             }     
+            
+     for(i=0;i<5;i++){ //print the array 
+        for(j=0;j<5;j++) 
+            printf("%d\t",matrix[i][j]); 
+       printf("\n");   
+       } 
+     getch(); 
+     return 0; 
+  
+    } 
+    
