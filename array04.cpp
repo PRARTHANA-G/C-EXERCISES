@@ -11,7 +11,7 @@
 
 int main() 
 {
-
+	int a[5][5];
 	int i, j;
 	int temp=1;
 		
