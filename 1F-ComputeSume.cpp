@@ -9,7 +9,7 @@ double compute_sum(int n)
 	double s=0;
 	double p;
 	int i;
-	int k=4*n+1;
+	int k=4*n+3;
 	for (i=0;i<=k; i++) 
 	{		
 		p=pow(-1, (double)i)/(2*i+1);
@@ -26,8 +26,8 @@ double s;
 do{
 printf("\nPlease input an integer valune n (n>=0): "); scanf("%d",&n);
 s=compute_sum(n) ;
-printf("The sum S = 1 - 1/3 + 1/5 - 1/7 + ... - 1/(4n+3) is: %20.17f", s);
-printf("\nLet verify PI number with 4*S:  %20.17f", 4*s);
+printf("The sum S = 1 - 1/3 + 1/5 - 1/7 + ... - 1/(4n+3) is: %e", s);
+printf("\nLet verify PI number with 4*S:  %e", 4*s);
 
 printf("\n");
 }while (true);
