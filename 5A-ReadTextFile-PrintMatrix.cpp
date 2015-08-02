@@ -4,22 +4,20 @@
 #include<string.h>
 #include <ctype.h>
 
-
 void print_matrix(char *filename);
 
 int main()
 {
 	char filename[100];
 
-    printf("==================================================\n");
-	printf("READ INFORMATION FROM A FILEP and PRINT THE MATRIX\n");
+        printf("==================================================\n");
+	printf("READ INFORMATION FROM A FILE and PRINT THE MATRIX\n");
 	printf("==================================================\n");
 	
 	do{
-	printf("\nEnter the NAME of FILE you wish to COUNT: "); gets(filename);
+	printf("\nEnter the NAME of FILE you wish to READ And PRINT: "); gets(filename);
 	printf("\nTHE MATRIX NEED TO PRINT:\n");
 	print_matrix(filename);
-
 	}while (true);
 
 system("pause");
@@ -45,7 +43,6 @@ void print_matrix(char *filename)
 	fscanf(fp, "%s", col); c=strtol(col, &ptr, 10);
 	long int k=r*c;int u=c-1;
 
-
 	do
 	{fscanf(fp, "%s", temp);
 	if(strcmp(temp, "")!=0)
@@ -60,13 +57,11 @@ void print_matrix(char *filename)
 	printf("\n");
 	for (i=0;i<k;i++)
 	{
-	
 		printf("%ld\t ", a[i]); 
 		if (i==u)
 			{ printf("\n");
 		u=u+c;
 			}
-	
 	}
 	printf("\n");
 	
